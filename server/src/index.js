@@ -1,8 +1,11 @@
 import express from "express";
 import connection from "./config/database.js";
+import playlistRoute from "./routes/playlisRoute.js";
 const app = express();
 const port = 3000;
 app.use(express.json());
+
+app.use("api/playlists" , playlistRoute)
 
 connection.connect((err) => {
     if(err){
