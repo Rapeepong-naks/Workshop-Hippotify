@@ -11,4 +11,4 @@ const connection = mysql.createConnection({
     database : process.env.DB_DATABASE,
 })
 
-export default connection
+export default connection;
